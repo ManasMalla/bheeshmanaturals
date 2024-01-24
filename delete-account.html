@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen flex flex-col items-center justify-center gap-6">
+      <div class="text-center space-y-2">
+        <h1 class="font-bold text-3xl">Delete Account</h1>
+        <p>
+          Provide the phone number linked to the account you would want to
+          delete
+        </p>
+      </div>
+      <input
+        type="text"
+        placeholder="Phone Number"
+        class="border-2 px-6 py-2"
+        id="phone-number"
+      />
+      <button
+        class="bg-black text-white rounded-full py-3 px-9"
+        onclick="function hi(){
+            const phone = getElementById('phone-number').value;
+            // alert(phone);
+            location.href=`mailto:bheeshmanaturals@gmail.com?subject=Delete Account&body=I request the deletion of my account, linked with the phone number:${phone}. Thanks and regards.`;
+        };hi()"
+      >
+        Request Account Deletion
+      </button>
+    </div>
+  </body>
+</html>
